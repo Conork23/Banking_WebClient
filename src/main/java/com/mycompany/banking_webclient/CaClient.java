@@ -14,7 +14,8 @@ public class CaClient {
     
     public static void main(String[] args){
        
-        WebClientGui myGui = new WebClientGui();
+        //WebClientGui myGui = new WebClientGui();
+        CustomersGUI myGui = new CustomersGUI();
         myGui.setVisible(true);
 
         
