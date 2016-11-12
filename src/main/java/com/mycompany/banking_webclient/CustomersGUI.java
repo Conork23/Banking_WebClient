@@ -45,6 +45,7 @@ public class CustomersGUI extends javax.swing.JFrame {
         exitBtn = new javax.swing.JButton();
         clearBtn = new javax.swing.JButton();
         updateUserBtn = new javax.swing.JButton();
+        titleLbl = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,6 +105,9 @@ public class CustomersGUI extends javax.swing.JFrame {
             }
         });
 
+        titleLbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleLbl.setText("Customer Client GUI");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -111,23 +115,6 @@ public class CustomersGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nameLbl)
-                            .addComponent(addressLbl)
-                            .addComponent(emailLbl)
-                            .addComponent(phoneLbl)
-                            .addComponent(idLbl))
-                        .addGap(55, 55, 55)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(nameTF)
-                            .addComponent(addressTF)
-                            .addComponent(emailTF)
-                            .addComponent(phoneTF)
-                            .addComponent(idTF, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(clearBtn)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
@@ -139,14 +126,36 @@ public class CustomersGUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(deleteUserBtn))
                             .addComponent(jScrollPane1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 21, Short.MAX_VALUE)
                         .addComponent(exitBtn)
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nameLbl)
+                            .addComponent(addressLbl)
+                            .addComponent(emailLbl)
+                            .addComponent(phoneLbl)
+                            .addComponent(idLbl))
+                        .addGap(55, 55, 55)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(titleLbl)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(nameTF)
+                                    .addComponent(addressTF)
+                                    .addComponent(emailTF)
+                                    .addComponent(phoneTF)
+                                    .addComponent(idTF, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(clearBtn)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(29, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(titleLbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(exitBtn)
                     .addGroup(layout.createSequentialGroup()
@@ -205,7 +214,7 @@ public class CustomersGUI extends javax.swing.JFrame {
         CustomersMethods custsmethod = new CustomersMethods();
         custsmethod.addCustomer(name, address, email, phone);
 
-        textArea.setText("Thank You, "+name+" Customer has been added to system: ");
+        textArea.setText("Thank You, "+name+" has been added to system: ");
     }//GEN-LAST:event_addUserBtnActionPerformed
 
     private void deleteUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteUserBtnActionPerformed
@@ -218,7 +227,16 @@ public class CustomersGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_deleteUserBtnActionPerformed
 
     private void updateUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateUserBtnActionPerformed
-        // TODO add your handling code here:
+        int id = Integer.parseInt(idTF.getText());
+        String name = nameTF.getText();
+        String address = addressTF.getText();
+        String email = emailTF.getText();
+        String phone = phoneTF.getText();
+
+        CustomersMethods custsmethod = new CustomersMethods();
+        String cust = custsmethod.updateCustomer(id, name, address, email, phone);
+
+        textArea.setText("Updated Customer Information: "+ cust);
     }//GEN-LAST:event_updateUserBtnActionPerformed
 
     private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtnActionPerformed
@@ -288,6 +306,7 @@ public class CustomersGUI extends javax.swing.JFrame {
     private javax.swing.JLabel phoneLbl;
     private javax.swing.JTextField phoneTF;
     private javax.swing.JTextArea textArea;
+    private javax.swing.JLabel titleLbl;
     private javax.swing.JButton updateUserBtn;
     // End of variables declaration//GEN-END:variables
 }
