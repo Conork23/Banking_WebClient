@@ -39,7 +39,7 @@
                           </Group>
                           <Component id="jScrollPane1" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" pref="21" max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" pref="26" max="32767" attributes="0"/>
                       <Component id="exitBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
