@@ -10,9 +10,8 @@ import com.sun.jersey.api.client.ClientHandlerException;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.UniformInterfaceException;
 import com.sun.jersey.api.client.WebResource;
-import com.sun.jersey.core.util.MultivaluedMapImpl;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.MultivaluedMap;
+
 
 /**
  *
@@ -39,7 +38,12 @@ public class CustomersMethods {
         try {
         Client client = Client.create();
         WebResource target = client.resource(baseUrl);
-
+        
+        /*
+        String url = baseUrl+id;
+        WebResource target = client.resource(url);
+        */
+        
         ClientResponse response = target
                 .queryParam("id", id+"")
                 .get(ClientResponse.class);

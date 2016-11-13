@@ -31,7 +31,7 @@ public class AccountsGUI extends javax.swing.JFrame {
         titleLbl = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        accntInfoLbl = new javax.swing.JLabel();
         custIDLbl = new javax.swing.JLabel();
         custIDTF = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -44,7 +44,7 @@ public class AccountsGUI extends javax.swing.JFrame {
         addAccountBtn = new javax.swing.JButton();
         deleteAccountBtn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        acctTransactionsLbl = new javax.swing.JLabel();
         customerIDLbl2 = new javax.swing.JLabel();
         accountLbl2 = new javax.swing.JLabel();
         amountLbl = new javax.swing.JLabel();
@@ -65,8 +65,8 @@ public class AccountsGUI extends javax.swing.JFrame {
         titleLbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         titleLbl.setText("Accounts Client GUI");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setText("Account Info");
+        accntInfoLbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        accntInfoLbl.setText("Account Info");
 
         custIDLbl.setText("Customer ID: ");
 
@@ -79,10 +79,25 @@ public class AccountsGUI extends javax.swing.JFrame {
         sortLbl.setText("Sort Code: ");
 
         balanceBtn.setText("Get Balance");
+        balanceBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                balanceBtnActionPerformed(evt);
+            }
+        });
 
         addAccountBtn.setText("Add Account");
+        addAccountBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addAccountBtnActionPerformed(evt);
+            }
+        });
 
         deleteAccountBtn.setText("Delete Account");
+        deleteAccountBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteAccountBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -105,7 +120,7 @@ public class AccountsGUI extends javax.swing.JFrame {
                                 .addComponent(sortLbl)
                                 .addGap(94, 94, 94)))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(accntInfoLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(custIDTF)
                             .addComponent(accountTF)
                             .addComponent(sortTF))))
@@ -119,7 +134,7 @@ public class AccountsGUI extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel5)
+                .addComponent(accntInfoLbl)
                 .addGap(23, 23, 23)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(custIDLbl)
@@ -132,7 +147,7 @@ public class AccountsGUI extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(sortLbl)
                     .addComponent(sortTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -146,8 +161,8 @@ public class AccountsGUI extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Info", jPanel2);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel6.setText("Account Transactions");
+        acctTransactionsLbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        acctTransactionsLbl.setText("Account Transactions");
 
         customerIDLbl2.setText("Customer ID:");
 
@@ -195,7 +210,7 @@ public class AccountsGUI extends javax.swing.JFrame {
                                 .addComponent(euroLbl)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
+                            .addComponent(acctTransactionsLbl)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
                                 .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,7 +220,7 @@ public class AccountsGUI extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jLabel6)
+                .addComponent(acctTransactionsLbl)
                 .addGap(36, 36, 36)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(customerIDLbl2)
@@ -219,7 +234,7 @@ public class AccountsGUI extends javax.swing.JFrame {
                     .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(amountLbl)
                     .addComponent(euroLbl))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -252,9 +267,9 @@ public class AccountsGUI extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(titleLbl)
-                .addGap(29, 29, 29)
-                .addComponent(jTabbedPane1)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51))
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName("Info");
@@ -278,6 +293,35 @@ public class AccountsGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void balanceBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_balanceBtnActionPerformed
+        int id = Integer.parseInt(custIDTF.getText());
+
+        AccountsMethods actsmethod = new AccountsMethods();
+        String balance = actsmethod.getBalance(id);
+
+        accountInfoTextArea.setText("The Balance For Your Accounts Is: \n"+ balance);
+    }//GEN-LAST:event_balanceBtnActionPerformed
+
+    private void addAccountBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAccountBtnActionPerformed
+       int id = Integer.parseInt(custIDTF.getText());
+       int sort_code = Integer.parseInt(sortTF.getText());
+
+        AccountsMethods actsmethod = new AccountsMethods();
+        actsmethod.addAccount(id, sort_code);
+
+        accountInfoTextArea.setText("Thank You, a new account registered to Customer ID: "+id+" has been added to system");
+    }//GEN-LAST:event_addAccountBtnActionPerformed
+
+    private void deleteAccountBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteAccountBtnActionPerformed
+       int id = Integer.parseInt(custIDTF.getText());
+       int account_no = Integer.parseInt(accountTF.getText());
+
+        AccountsMethods actsmethod = new AccountsMethods();
+        actsmethod.deleteAccount(id, account_no);
+
+        accountInfoTextArea.setText("Account Number: "+account_no+" has been deleted");
+    }//GEN-LAST:event_deleteAccountBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -315,10 +359,12 @@ public class AccountsGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel accntInfoLbl;
     private javax.swing.JTextArea accountInfoTextArea;
     private javax.swing.JLabel accountLbl;
     private javax.swing.JLabel accountLbl2;
     private javax.swing.JTextField accountTF;
+    private javax.swing.JLabel acctTransactionsLbl;
     private javax.swing.JButton addAccountBtn;
     private javax.swing.JLabel amountLbl;
     private javax.swing.JTextField amountTF;
@@ -328,8 +374,6 @@ public class AccountsGUI extends javax.swing.JFrame {
     private javax.swing.JLabel customerIDLbl2;
     private javax.swing.JButton deleteAccountBtn;
     private javax.swing.JLabel euroLbl;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
