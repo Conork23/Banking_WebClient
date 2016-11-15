@@ -9,7 +9,7 @@ import javax.ws.rs.core.MediaType;
 
 /**
  *
- * @author nathan
+ * @author nathan ryan x13448212
  */
 public class AccountsMethods {
     String baseUrl;
@@ -22,12 +22,12 @@ public class AccountsMethods {
     
      /*
      * getBalance           - Read Account Details        - Input type is query params (enter customer ID)
-     * addAccount           - Create Account              - Input type is String input (enter customer ID, sort_code)
+     * addAccount           - Create Account              - Input type is Json (enter customer ID, sort_code)
      * deleteAccount        - Delete Account              - Input type is PATH params (enter customer ID, account_no)
      *
-     *withdrawTransaction   - Take money from account                   - Input type is String input (enter customer ID, account_no, amount)
-     *lodgementTransaction  - Add money to account                      - Input type is String input (enter customer ID, account_no, amount)
-     *transferTransaction   - Transfer money from account to another    - Input type is String input (enter customer to, account_to, cust_id, account_no, amount)
+     *withdrawTransaction   - Take money from account                   - Input type is Json (enter customer ID, account_no, amount)
+     *lodgementTransaction  - Add money to account                      - Input type is Json (enter customer ID, account_no, amount)
+     *transferTransaction   - Transfer money from account to another    - Input type is Json (enter customer to, account_to, cust_id, account_no, amount)
      */
     
     public String getBalance(int id){
@@ -131,14 +131,16 @@ public class AccountsMethods {
         return "Error";
     }
     
-    public String transferTransaction(int id, int account_no, int amount){
+    public String transferTransaction(int cust_to, int account_to, int id, int account_no, int amount){
         try {
             Client client = Client.create();
             String url = baseUrl+"transfer";
             WebResource webResource = client.resource(url);
             
             String input = "{\""
-                    + "cust_id\":\""+id+"\","
+                    + "cust_id_to\":\""+cust_to+"\","
+                    + "\"account_no_to\":\""+account_to+"\","
+                    + "\"cust_id\":\""+id+"\","
                     + "\"account_no\":\""+account_no+"\","
                     + "\"amount\":\""+amount+"\""
                     + "}"; 

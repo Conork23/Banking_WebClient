@@ -15,7 +15,7 @@ import javax.ws.rs.core.MediaType;
 
 /**
  *
- * @author nathan
+ * @author nathan ryan x13448212
  */
 public class CustomersMethods {
     
@@ -29,9 +29,9 @@ public class CustomersMethods {
     
      /*
      * getCustomer       - Read Customer Details        - Input type is query params (enter customer ID)
-     * addCustomer       - Create Customer              - Input type is String input (enter customer name, address, email, phone)
+     * addCustomer       - Create Customer              - Input type is Json (enter customer name, address, email, phone)
      * deleteCustomer    - Delete Customer              - Input type is query params (enter customer ID)
-     * updateCustomer    - Update Customer Details      - Input type is String input (enter customer id, name, address, email, phone)
+     * updateCustomer    - Update Customer Details      - Input type is Json (enter customer id, name, address, email, phone)
      */
     
     public String getCustomer(int id){
