@@ -5,6 +5,7 @@
  */
 package com.mycompany.banking_webclient;
 
+
 /**
  *
  * @author nathan
@@ -48,16 +49,36 @@ public class AccountsGUI extends javax.swing.JFrame {
         customerIDLbl2 = new javax.swing.JLabel();
         accountLbl2 = new javax.swing.JLabel();
         amountLbl = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        custIDTF2 = new javax.swing.JTextField();
+        accountTF2 = new javax.swing.JTextField();
         amountTF = new javax.swing.JTextField();
         euroLbl = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         transactionTextArea = new javax.swing.JTextArea();
-        withdrawRadioButton = new javax.swing.JRadioButton();
-        lodgementRadioButton = new javax.swing.JRadioButton();
-        transferRadioButton = new javax.swing.JRadioButton();
-        submitBtn = new javax.swing.JButton();
+        withdrawBtn = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        customerIDLbl3 = new javax.swing.JLabel();
+        custIDLodgement = new javax.swing.JTextField();
+        accountTFLodgement = new javax.swing.JTextField();
+        accountLbl3 = new javax.swing.JLabel();
+        amountLbl1 = new javax.swing.JLabel();
+        amountTFLodgement = new javax.swing.JTextField();
+        lodgementBtn = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        lodgementTextArea = new javax.swing.JTextArea();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        customerIDLbl4 = new javax.swing.JLabel();
+        custIDTransfer = new javax.swing.JTextField();
+        accountLbl4 = new javax.swing.JLabel();
+        accountTFTransfer = new javax.swing.JTextField();
+        amountTFTransfer = new javax.swing.JTextField();
+        euroLbl1 = new javax.swing.JLabel();
+        amountLbl2 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        transferTextArea = new javax.swing.JTextArea();
+        transferBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(465, 387));
@@ -129,7 +150,7 @@ public class AccountsGUI extends javax.swing.JFrame {
                     .addComponent(deleteAccountBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(balanceBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(addAccountBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,10 +180,10 @@ public class AccountsGUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Info", jPanel2);
+        jTabbedPane1.addTab("Account Info", jPanel2);
 
         acctTransactionsLbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        acctTransactionsLbl.setText("Account Transactions");
+        acctTransactionsLbl.setText("Withdraw");
 
         customerIDLbl2.setText("Customer ID:");
 
@@ -176,13 +197,12 @@ public class AccountsGUI extends javax.swing.JFrame {
         transactionTextArea.setRows(5);
         jScrollPane2.setViewportView(transactionTextArea);
 
-        withdrawRadioButton.setText("Withdrawal");
-
-        lodgementRadioButton.setText("Lodgement");
-
-        transferRadioButton.setText("Transfer");
-
-        submitBtn.setText("Submit");
+        withdrawBtn.setText("Withdraw");
+        withdrawBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                withdrawBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -193,29 +213,24 @@ public class AccountsGUI extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(withdrawRadioButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lodgementRadioButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(transferRadioButton)
-                            .addComponent(submitBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(customerIDLbl2)
-                            .addComponent(accountLbl2)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(amountLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
-                                .addComponent(euroLbl)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(acctTransactionsLbl)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(amountTF, javax.swing.GroupLayout.Alignment.LEADING)))
-                        .addGap(136, 136, 136))))
+                        .addComponent(withdrawBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(customerIDLbl2)
+                    .addComponent(accountLbl2)
+                    .addComponent(amountLbl))
+                .addContainerGap(39, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(euroLbl)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(custIDTF2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(acctTransactionsLbl)
+                        .addComponent(accountTF2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,44 +239,196 @@ public class AccountsGUI extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(customerIDLbl2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(custIDTF2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(accountLbl2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(accountTF2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(amountTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(amountLbl)
                     .addComponent(euroLbl))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(withdrawRadioButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lodgementRadioButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(transferRadioButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(submitBtn)))
-                .addGap(24, 24, 24))
+                    .addComponent(withdrawBtn))
+                .addGap(27, 27, 27))
         );
 
-        jTabbedPane1.addTab("Transactions", jPanel3);
+        jTabbedPane1.addTab("Withdraw", jPanel3);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setText("Lodgement");
+
+        customerIDLbl3.setText("Customer ID:");
+
+        accountLbl3.setText("Account Number: ");
+
+        amountLbl1.setText("Amount: ");
+
+        lodgementBtn.setText("Lodgement");
+        lodgementBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lodgementBtnActionPerformed(evt);
+            }
+        });
+
+        lodgementTextArea.setColumns(20);
+        lodgementTextArea.setRows(5);
+        jScrollPane3.setViewportView(lodgementTextArea);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(155, 155, 155)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(customerIDLbl3)
+                            .addComponent(accountLbl3)
+                            .addComponent(amountLbl1)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(131, 131, 131)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(amountTFLodgement, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(custIDLodgement, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(accountTFLodgement, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lodgementBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lodgementBtn))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(customerIDLbl3)
+                            .addComponent(custIDLodgement, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(accountLbl3)
+                            .addComponent(accountTFLodgement, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(amountTFLodgement, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(amountLbl1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(26, 26, 26))
+        );
+
+        jTabbedPane1.addTab("Lodgement", jPanel4);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setText("Transfer");
+
+        customerIDLbl4.setText("Customer ID:");
+
+        accountLbl4.setText("Account Number: ");
+
+        euroLbl1.setText("€");
+
+        amountLbl2.setText("Amount: ");
+
+        transferTextArea.setColumns(20);
+        transferTextArea.setRows(5);
+        jScrollPane4.setViewportView(transferTextArea);
+
+        transferBtn.setText("Withdraw");
+        transferBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                transferBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(163, 163, 163)
+                .addComponent(jLabel2)
+                .addContainerGap(182, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel5Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(customerIDLbl4)
+                        .addComponent(accountLbl4)
+                        .addComponent(amountLbl2)
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                            .addGap(121, 121, 121)
+                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPanel5Layout.createSequentialGroup()
+                                    .addComponent(euroLbl1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(amountTFTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(custIDTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(accountTFTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(transferBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(39, Short.MAX_VALUE)))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addGap(0, 242, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel5Layout.createSequentialGroup()
+                    .addGap(29, 29, 29)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(customerIDLbl4)
+                        .addComponent(custIDTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(18, 18, 18)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(accountLbl4)
+                        .addComponent(accountTFTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(18, 18, 18)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(amountTFTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(amountLbl2)
+                        .addComponent(euroLbl1))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(transferBtn))
+                    .addGap(30, 30, 30)))
+        );
+
+        jTabbedPane1.addTab("Transfer", jPanel5);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(146, 146, 146)
-                .addComponent(titleLbl)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane1)
-                .addContainerGap())
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(146, 146, 146)
+                        .addComponent(titleLbl))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -323,6 +490,25 @@ public class AccountsGUI extends javax.swing.JFrame {
         accountInfoTextArea.setText("Account Number: "+account_no+" has been deleted");
     }//GEN-LAST:event_deleteAccountBtnActionPerformed
 
+    private void withdrawBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_withdrawBtnActionPerformed
+       int id = Integer.parseInt(custIDTF2.getText());
+       int account_no = Integer.parseInt(accountTF2.getText());
+       int amount = Integer.parseInt(amountTF.getText());
+
+        AccountsMethods actsmethod = new AccountsMethods();
+        actsmethod.withdrawTransaction(id, account_no, amount);
+
+        transactionTextArea.setText("Amount: "+amount+" has been withdrawn from account number "+account_no);
+    }//GEN-LAST:event_withdrawBtnActionPerformed
+
+    private void lodgementBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lodgementBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lodgementBtnActionPerformed
+
+    private void transferBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transferBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_transferBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -363,32 +549,52 @@ public class AccountsGUI extends javax.swing.JFrame {
     private javax.swing.JTextArea accountInfoTextArea;
     private javax.swing.JLabel accountLbl;
     private javax.swing.JLabel accountLbl2;
+    private javax.swing.JLabel accountLbl3;
+    private javax.swing.JLabel accountLbl4;
     private javax.swing.JTextField accountTF;
+    private javax.swing.JTextField accountTF2;
+    private javax.swing.JTextField accountTFLodgement;
+    private javax.swing.JTextField accountTFTransfer;
     private javax.swing.JLabel acctTransactionsLbl;
     private javax.swing.JButton addAccountBtn;
     private javax.swing.JLabel amountLbl;
+    private javax.swing.JLabel amountLbl1;
+    private javax.swing.JLabel amountLbl2;
     private javax.swing.JTextField amountTF;
+    private javax.swing.JTextField amountTFLodgement;
+    private javax.swing.JTextField amountTFTransfer;
     private javax.swing.JButton balanceBtn;
     private javax.swing.JLabel custIDLbl;
+    private javax.swing.JTextField custIDLodgement;
     private javax.swing.JTextField custIDTF;
+    private javax.swing.JTextField custIDTF2;
+    private javax.swing.JTextField custIDTransfer;
     private javax.swing.JLabel customerIDLbl2;
+    private javax.swing.JLabel customerIDLbl3;
+    private javax.swing.JLabel customerIDLbl4;
     private javax.swing.JButton deleteAccountBtn;
     private javax.swing.JLabel euroLbl;
+    private javax.swing.JLabel euroLbl1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JRadioButton lodgementRadioButton;
+    private javax.swing.JButton lodgementBtn;
+    private javax.swing.JTextArea lodgementTextArea;
     private javax.swing.JLabel sortLbl;
     private javax.swing.JTextField sortTF;
-    private javax.swing.JButton submitBtn;
     private javax.swing.JLabel titleLbl;
     private javax.swing.JTextArea transactionTextArea;
-    private javax.swing.JRadioButton transferRadioButton;
-    private javax.swing.JRadioButton withdrawRadioButton;
+    private javax.swing.JButton transferBtn;
+    private javax.swing.JTextArea transferTextArea;
+    private javax.swing.JButton withdrawBtn;
     // End of variables declaration//GEN-END:variables
 }

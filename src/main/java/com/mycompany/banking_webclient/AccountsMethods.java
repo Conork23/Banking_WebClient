@@ -6,8 +6,7 @@ import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.UniformInterfaceException;
 import com.sun.jersey.api.client.WebResource;
 import javax.ws.rs.core.MediaType;
-import com.sun.jersey.core.util.MultivaluedMapImpl;
-import javax.ws.rs.core.MultivaluedMap;
+
 /**
  *
  * @author nathan
@@ -22,17 +21,22 @@ public class AccountsMethods {
     }
     
      /*
-     * getBalance       - Read Account Details        - Input type is query params (enter customer ID)
-     * addAccount       - Create Account              - Input type is String input (enter customer ID, sort_code)
-     * deleteAccount    - Delete Account              - Input type is PATH params (enter customer ID, account_no)
+     * getBalance           - Read Account Details        - Input type is query params (enter customer ID)
+     * addAccount           - Create Account              - Input type is String input (enter customer ID, sort_code)
+     * deleteAccount        - Delete Account              - Input type is PATH params (enter customer ID, account_no)
+     *
+     *withdrawTransaction   - Take money from account                   - Input type is String input (enter customer ID, account_no, amount)
+     *lodgementTransaction  - Add money to account                      - Input type is String input (enter customer ID, account_no, amount)
+     *transferTransaction   - Transfer money from account to another    - Input type is String input (enter customer to, account_to, cust_id, account_no, amount)
      */
     
-        public String getBalance(int id){
+    public String getBalance(int id){
         try {
             Client client = Client.create();
             String url = baseUrl+"balance/"+id;
             WebResource target = client.resource(url);
-
+            
+            //GET
             ClientResponse response = target
                     .queryParam("id", id+"")
                     .get(ClientResponse.class);
@@ -42,7 +46,7 @@ public class AccountsMethods {
         return "Error";
     }
         
-        public String addAccount(int id, int sort_code){
+    public String addAccount(int id, int sort_code){
         try {
             Client client = Client.create();
             WebResource webResource = client.resource(baseUrl);
@@ -63,7 +67,7 @@ public class AccountsMethods {
         return "Error";
     }
         
-        public String deleteAccount(int id, int account_no){
+    public String deleteAccount(int id, int account_no){
         try {
             Client client = Client.create();         
             String url = baseUrl+id+"/"+account_no;
@@ -78,6 +82,75 @@ public class AccountsMethods {
 
         } catch (ClientHandlerException | UniformInterfaceException e) {}
          
+        return "Error";
+    }
+        
+    public String withdrawTransaction(int id, int account_no, int amount){
+        try {
+            Client client = Client.create();
+            String url = baseUrl+"withdrawal";
+            WebResource webResource = client.resource(url);
+            
+            String input = "{\""
+                    + "cust_id\":\""+id+"\","
+                    + "\"account_no\":\""+account_no+"\","
+                    + "\"amount\":\""+amount+"\""
+                    + "}"; 
+
+            //POST 
+            ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
+                    .post(ClientResponse.class, input);                   
+
+            return response.getEntity(String.class);
+           
+        } catch (ClientHandlerException | UniformInterfaceException e) {}
+        
+        return "Error";
+    }
+        
+    public String lodgementTransaction(int id, int account_no, int amount){
+        try {
+            Client client = Client.create();
+            String url = baseUrl+"lodgement";
+            WebResource webResource = client.resource(url);
+            
+            String input = "{\""
+                    + "cust_id\":\""+id+"\","
+                    + "\"account_no\":\""+account_no+"\","
+                    + "\"amount\":\""+amount+"\""
+                    + "}"; 
+
+            //POST 
+            ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
+                    .post(ClientResponse.class, input);                   
+
+            return response.getEntity(String.class);
+           
+        } catch (ClientHandlerException | UniformInterfaceException e) {}
+        
+        return "Error";
+    }
+    
+    public String transferTransaction(int id, int account_no, int amount){
+        try {
+            Client client = Client.create();
+            String url = baseUrl+"transfer";
+            WebResource webResource = client.resource(url);
+            
+            String input = "{\""
+                    + "cust_id\":\""+id+"\","
+                    + "\"account_no\":\""+account_no+"\","
+                    + "\"amount\":\""+amount+"\""
+                    + "}"; 
+
+            //POST 
+            ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
+                    .post(ClientResponse.class, input);                   
+
+            return response.getEntity(String.class);
+           
+        } catch (ClientHandlerException | UniformInterfaceException e) {}
+        
         return "Error";
     }
 }

@@ -38,14 +38,10 @@ public class CustomersMethods {
         try {
         Client client = Client.create();
         WebResource target = client.resource(baseUrl);
-        
-        /*
-        String url = baseUrl+id;
-        WebResource target = client.resource(url);
-        */
-        
+       
+       //GET 
         ClientResponse response = target
-                .queryParam("id", id+"")
+                .queryParam("cust_id", id+"")
                 .get(ClientResponse.class);
         
         return response.getEntity(String.class);
@@ -83,6 +79,7 @@ public class CustomersMethods {
             String url = baseUrl+id;
             WebResource webResource = client.resource(url);
 
+            //DELETE
             ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
                     .delete(ClientResponse.class);
 
@@ -110,29 +107,6 @@ public class CustomersMethods {
             //PUT 
             ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
                     .put(ClientResponse.class, input);
-            
-            /*
-            String input = "{\""
-                    + "id\":\""+id+"\","
-                    + "\name\":\""+name+"\","
-                    + "\"address\":\""+address+"\","
-                    + "\"email\":\""+email+"\","
-                    + "\"phone\":\""+phone+"\""
-                    + "}"; 
-
-            //PUT 
-            ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
-                    .put(ClientResponse.class, input);
-            
-            
-            ClientResponse response = webResource
-                .queryParam("id", id+"")
-                .queryParam("name", name+"")
-                .queryParam("address", address+"")
-                .queryParam("email", email+"")
-                .queryParam("phone", phone+"")
-                .put(ClientResponse.class);
-            */
             
             return response.getEntity(String.class);
 
