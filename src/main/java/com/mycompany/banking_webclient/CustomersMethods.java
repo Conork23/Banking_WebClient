@@ -83,7 +83,7 @@ public class CustomersMethods {
             ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
                     .delete(ClientResponse.class);
 
-            return response.getEntity(String.class);
+            return "Customer Deleted";
             
 
         } catch (ClientHandlerException | UniformInterfaceException e) {}

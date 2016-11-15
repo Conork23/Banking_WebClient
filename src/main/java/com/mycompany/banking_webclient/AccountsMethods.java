@@ -38,7 +38,7 @@ public class AccountsMethods {
             
             //GET
             ClientResponse response = target
-                    .queryParam("id", id+"")
+                    .queryParam("cust_id", id+"")
                     .get(ClientResponse.class);
 
             return response.getEntity(String.class);
@@ -77,7 +77,7 @@ public class AccountsMethods {
             ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
                     .delete(ClientResponse.class);
 
-            return response.getEntity(String.class);
+            return "Account Deleted";
             
 
         } catch (ClientHandlerException | UniformInterfaceException e) {}
