@@ -564,39 +564,60 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="amountLbl2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jScrollPane4" min="-2" pref="230" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="transferBtn" min="-2" pref="110" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="accountLbl4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="customerIDLbl4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="accountLbl5" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="customerIDLbl5" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="121" pref="121" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="customerIDLbl4" min="-2" max="-2" attributes="0"/>
+                                      <Component id="accountLbl4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="custIDFromTransfer" max="32767" attributes="0"/>
+                                              <Component id="accountFromTransfer" pref="88" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="accountLbl5" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="accountToTransfer" min="-2" pref="88" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Component id="customerIDLbl5" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                                  <Component id="custIDToTransfer" min="-2" pref="88" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                          <Component id="accountToTransfer" alignment="1" min="-2" pref="88" max="-2" attributes="0"/>
-                                          <Component id="custIDToTransfer" alignment="1" min="-2" pref="88" max="-2" attributes="0"/>
-                                          <Component id="custIDFromTransfer" alignment="1" min="-2" pref="88" max="-2" attributes="0"/>
-                                          <Component id="accountFromTransfer" alignment="1" min="-2" pref="88" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="0" pref="27" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                                                  <Component id="jScrollPane4" min="-2" pref="230" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="amountLbl2" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Component id="euroLbl3" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="amountTFTransfer" min="-2" pref="88" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="transferBtn" min="-2" pref="110" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="euroLbl3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="amountTFTransfer" min="-2" pref="88" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
-                              </Group>
                           </Group>
-                          <EmptySpace pref="129" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -608,34 +629,26 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="customerIDLbl5" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="custIDToTransfer" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="accountLbl5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="accountToTransfer" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="customerIDLbl4" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="custIDFromTransfer" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="accountLbl5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="accountToTransfer" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="accountLbl4" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="accountFromTransfer" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="amountTFTransfer" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="amountLbl2" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="euroLbl3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="transferBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jScrollPane4" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Component id="transferBtn" alignment="1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -651,7 +664,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="customerIDLbl4">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Customer from:"/>
+                    <Property name="text" type="java.lang.String" value="Customer ID from:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="custIDFromTransfer">
@@ -700,7 +713,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="customerIDLbl5">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Customer to:"/>
+                    <Property name="text" type="java.lang.String" value="Customer ID to:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="accountLbl5">
