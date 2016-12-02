@@ -27,64 +27,52 @@ public class CustomersGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        textArea = new javax.swing.JTextArea();
-        listUsersBtn = new javax.swing.JButton();
-        addUserBtn = new javax.swing.JButton();
-        deleteUserBtn = new javax.swing.JButton();
-        addressTF = new javax.swing.JTextField();
-        nameTF = new javax.swing.JTextField();
-        emailTF = new javax.swing.JTextField();
-        phoneTF = new javax.swing.JTextField();
-        nameLbl = new javax.swing.JLabel();
-        addressLbl = new javax.swing.JLabel();
-        emailLbl = new javax.swing.JLabel();
-        phoneLbl = new javax.swing.JLabel();
-        idLbl = new javax.swing.JLabel();
-        idTF = new javax.swing.JTextField();
         exitBtn = new javax.swing.JButton();
         clearBtn = new javax.swing.JButton();
-        updateUserBtn = new javax.swing.JButton();
         titleLbl = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         homeCustomersBtn = new javax.swing.JButton();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        idLbl = new javax.swing.JLabel();
+        idTF = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        textAreaInfo = new javax.swing.JTextArea();
+        listUsersBtn = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        addUserBtn = new javax.swing.JButton();
+        nameLbl = new javax.swing.JLabel();
+        nameTF = new javax.swing.JTextField();
+        addressLbl = new javax.swing.JLabel();
+        addressTF = new javax.swing.JTextField();
+        emailLbl = new javax.swing.JLabel();
+        emailTF = new javax.swing.JTextField();
+        phoneTF = new javax.swing.JTextField();
+        phoneLbl = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        textAreaRegister = new javax.swing.JTextArea();
+        jPanel3 = new javax.swing.JPanel();
+        updateUserBtn = new javax.swing.JButton();
+        nameLbl1 = new javax.swing.JLabel();
+        nameTFUpdate = new javax.swing.JTextField();
+        addressTFUpdate = new javax.swing.JTextField();
+        addressLbl1 = new javax.swing.JLabel();
+        emailLbl1 = new javax.swing.JLabel();
+        emailTFUpdate = new javax.swing.JTextField();
+        phoneTFUpdate = new javax.swing.JTextField();
+        phoneLbl1 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        textAreaUpdate = new javax.swing.JTextArea();
+        idLbl2 = new javax.swing.JLabel();
+        idTFUpdate = new javax.swing.JTextField();
+        jPanel4 = new javax.swing.JPanel();
+        deleteUserBtn = new javax.swing.JButton();
+        idLbl1 = new javax.swing.JLabel();
+        idTFDelete = new javax.swing.JTextField();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        textAreaDelete = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        textArea.setColumns(20);
-        textArea.setRows(5);
-        jScrollPane1.setViewportView(textArea);
-
-        listUsersBtn.setText("List Users");
-        listUsersBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                listUsersBtnActionPerformed(evt);
-            }
-        });
-
-        addUserBtn.setText("Add User");
-        addUserBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addUserBtnActionPerformed(evt);
-            }
-        });
-
-        deleteUserBtn.setText("Delete User");
-        deleteUserBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteUserBtnActionPerformed(evt);
-            }
-        });
-
-        nameLbl.setText("Name: ");
-
-        addressLbl.setText("Address:");
-
-        emailLbl.setText("Email: ");
-
-        phoneLbl.setText("Phone: ");
-
-        idLbl.setText("Customer ID: ");
 
         exitBtn.setText("Exit");
         exitBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -100,13 +88,6 @@ public class CustomersGUI extends javax.swing.JFrame {
             }
         });
 
-        updateUserBtn.setText("Update User");
-        updateUserBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateUserBtnActionPerformed(evt);
-            }
-        });
-
         titleLbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         titleLbl.setText("Customer Administration");
 
@@ -119,6 +100,258 @@ public class CustomersGUI extends javax.swing.JFrame {
             }
         });
 
+        idLbl.setText("Customer ID: ");
+
+        textAreaInfo.setColumns(20);
+        textAreaInfo.setRows(5);
+        jScrollPane1.setViewportView(textAreaInfo);
+
+        listUsersBtn.setText("List User");
+        listUsersBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listUsersBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(listUsersBtn)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(idLbl)
+                            .addGap(59, 59, 59)
+                            .addComponent(idTF, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(126, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(idLbl)
+                    .addComponent(idTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(7, 7, 7)
+                .addComponent(listUsersBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 98, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Customer Info", jPanel1);
+
+        addUserBtn.setText("Add User");
+        addUserBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addUserBtnActionPerformed(evt);
+            }
+        });
+
+        nameLbl.setText("Name: ");
+
+        addressLbl.setText("Address:");
+
+        emailLbl.setText("Email: ");
+
+        phoneLbl.setText("Phone: ");
+
+        textAreaRegister.setColumns(20);
+        textAreaRegister.setRows(5);
+        jScrollPane2.setViewportView(textAreaRegister);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jScrollPane2)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(emailLbl)
+                            .addComponent(phoneLbl)
+                            .addComponent(addressLbl)
+                            .addComponent(nameLbl))
+                        .addGap(47, 47, 47)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(emailTF, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(phoneTF, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                            .addComponent(addressTF)
+                            .addComponent(nameTF, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(addUserBtn)))
+                .addContainerGap(152, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(nameLbl)
+                        .addGap(6, 6, 6))
+                    .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(addressLbl))
+                    .addComponent(addressTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(emailLbl)
+                        .addGap(9, 9, 9))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(emailTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(phoneLbl)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(phoneTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(addUserBtn)))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Register Customer", jPanel2);
+
+        updateUserBtn.setText("Update User");
+        updateUserBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateUserBtnActionPerformed(evt);
+            }
+        });
+
+        nameLbl1.setText("Name: ");
+
+        addressLbl1.setText("Address:");
+
+        emailLbl1.setText("Email: ");
+
+        phoneLbl1.setText("Phone: ");
+
+        textAreaUpdate.setColumns(20);
+        textAreaUpdate.setRows(5);
+        jScrollPane3.setViewportView(textAreaUpdate);
+
+        idLbl2.setText("Customer ID: ");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jScrollPane3)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(emailLbl1)
+                            .addComponent(phoneLbl1)
+                            .addComponent(addressLbl1)
+                            .addComponent(nameLbl1)
+                            .addComponent(idLbl2))
+                        .addGap(23, 23, 23)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(emailTFUpdate, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(phoneTFUpdate, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(addressTFUpdate)
+                            .addComponent(nameTFUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                            .addComponent(idTFUpdate))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(updateUserBtn)))
+                .addGap(166, 166, 166))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(idLbl2)
+                    .addComponent(idTFUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(93, 93, 93)
+                        .addComponent(updateUserBtn))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nameLbl1)
+                            .addComponent(nameTFUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(addressLbl1))
+                            .addComponent(addressTFUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(emailLbl1)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(emailTFUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(phoneLbl1)
+                            .addComponent(phoneTFUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Update Customer", jPanel3);
+
+        deleteUserBtn.setText("Delete User");
+        deleteUserBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteUserBtnActionPerformed(evt);
+            }
+        });
+
+        idLbl1.setText("Customer ID: ");
+
+        textAreaDelete.setColumns(20);
+        textAreaDelete.setRows(5);
+        jScrollPane4.setViewportView(textAreaDelete);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(deleteUserBtn)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addComponent(idLbl1)
+                            .addGap(59, 59, 59)
+                            .addComponent(idTFDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(0, 126, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(idLbl1)
+                    .addComponent(idTFDelete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(7, 7, 7)
+                .addComponent(deleteUserBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(98, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Delete Customer", jPanel4);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -127,95 +360,38 @@ public class CustomersGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(nameLbl)
-                                    .addComponent(addressLbl)
-                                    .addComponent(emailLbl)
-                                    .addComponent(phoneLbl)
-                                    .addComponent(idLbl))
-                                .addGap(43, 43, 43)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(nameTF)
-                                    .addComponent(addressTF)
-                                    .addComponent(emailTF)
-                                    .addComponent(phoneTF)
-                                    .addComponent(idTF, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(clearBtn))
-                            .addComponent(titleLbl))
+                        .addComponent(titleLbl)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(listUsersBtn)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(addUserBtn)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(updateUserBtn)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(deleteUserBtn))
-                                    .addComponent(jScrollPane1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 29, Short.MAX_VALUE)
-                                .addComponent(exitBtn))
-                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(homeCustomersBtn)))
+                                .addComponent(homeCustomersBtn))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(clearBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(exitBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 516, Short.MAX_VALUE))
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(11, 11, 11)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(homeCustomersBtn))
                 .addGap(18, 18, 18)
                 .addComponent(titleLbl)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(exitBtn)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(idLbl)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(nameLbl)
-                                                .addGap(34, 34, 34))
-                                            .addComponent(addressLbl))
-                                        .addGap(31, 31, 31))
-                                    .addComponent(emailLbl))
-                                .addGap(20, 20, 20)
-                                .addComponent(phoneLbl))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(idTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(addressTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(emailTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(phoneTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(clearBtn))))
-                        .addGap(48, 48, 48)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(listUsersBtn)
-                            .addComponent(addUserBtn)
-                            .addComponent(deleteUserBtn)
-                            .addComponent(updateUserBtn))
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addGap(18, 18, 18)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(clearBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(exitBtn)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         pack();
@@ -227,7 +403,7 @@ public class CustomersGUI extends javax.swing.JFrame {
         CustomersMethods custsmethod = new CustomersMethods();
         String cust = custsmethod.getCustomer(id);
 
-        textArea.setText("Customer Details: "+ cust);
+        textAreaInfo.setText("Customer Details: "+ cust);
     }//GEN-LAST:event_listUsersBtnActionPerformed
 
     private void addUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addUserBtnActionPerformed
@@ -239,29 +415,29 @@ public class CustomersGUI extends javax.swing.JFrame {
         CustomersMethods custsmethod = new CustomersMethods();
         custsmethod.addCustomer(name, address, email, phone);
 
-        textArea.setText("Thank You, "+name+" has been added to system: ");
+        textAreaRegister.setText("Thank You, "+name+" has been added to system");
     }//GEN-LAST:event_addUserBtnActionPerformed
 
     private void deleteUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteUserBtnActionPerformed
-        int id = Integer.parseInt(idTF.getText());
+        int id = Integer.parseInt(idTFDelete.getText());
 
         CustomersMethods custsmethod = new CustomersMethods();
         custsmethod.deleteCustomer(id);
 
-        textArea.setText("Customer: "+id+" has been deleted");
+        textAreaDelete.setText("Customer: "+id+" has been deleted");
     }//GEN-LAST:event_deleteUserBtnActionPerformed
 
     private void updateUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateUserBtnActionPerformed
-        int id = Integer.parseInt(idTF.getText());
-        String name = nameTF.getText();
-        String address = addressTF.getText();
-        String email = emailTF.getText();
-        String phone = phoneTF.getText();
+        int id = Integer.parseInt(idTFUpdate.getText());
+        String name = nameTFUpdate.getText();
+        String address = addressTFUpdate.getText();
+        String email = emailTFUpdate.getText();
+        String phone = phoneTFUpdate.getText();
 
         CustomersMethods custsmethod = new CustomersMethods();
         String cust = custsmethod.updateCustomer(id, name, address, email, phone);
 
-        textArea.setText("Updated Customer Information: "+ cust);
+        textAreaUpdate.setText("Updated Customer Information: "+ cust);
     }//GEN-LAST:event_updateUserBtnActionPerformed
 
     private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtnActionPerformed
@@ -270,6 +446,12 @@ public class CustomersGUI extends javax.swing.JFrame {
         addressTF.setText(null);
         emailTF.setText(null);
         phoneTF.setText(null);
+        idTFUpdate.setText(null);
+        nameTFUpdate.setText(null);
+        addressTFUpdate.setText(null);
+        emailTFUpdate.setText(null);
+        phoneTFUpdate.setText(null);
+        idTFDelete.setText(null);
     }//GEN-LAST:event_clearBtnActionPerformed
 
     private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtnActionPerformed
@@ -324,23 +506,46 @@ public class CustomersGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addUserBtn;
     private javax.swing.JLabel addressLbl;
+    private javax.swing.JLabel addressLbl1;
     private javax.swing.JTextField addressTF;
+    private javax.swing.JTextField addressTFUpdate;
     private javax.swing.JButton clearBtn;
     private javax.swing.JButton deleteUserBtn;
     private javax.swing.JLabel emailLbl;
+    private javax.swing.JLabel emailLbl1;
     private javax.swing.JTextField emailTF;
+    private javax.swing.JTextField emailTFUpdate;
     private javax.swing.JButton exitBtn;
     private javax.swing.JButton homeCustomersBtn;
     private javax.swing.JLabel idLbl;
+    private javax.swing.JLabel idLbl1;
+    private javax.swing.JLabel idLbl2;
     private javax.swing.JTextField idTF;
+    private javax.swing.JTextField idTFDelete;
+    private javax.swing.JTextField idTFUpdate;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JButton listUsersBtn;
     private javax.swing.JLabel nameLbl;
+    private javax.swing.JLabel nameLbl1;
     private javax.swing.JTextField nameTF;
+    private javax.swing.JTextField nameTFUpdate;
     private javax.swing.JLabel phoneLbl;
+    private javax.swing.JLabel phoneLbl1;
     private javax.swing.JTextField phoneTF;
-    private javax.swing.JTextArea textArea;
+    private javax.swing.JTextField phoneTFUpdate;
+    private javax.swing.JTextArea textAreaDelete;
+    private javax.swing.JTextArea textAreaInfo;
+    private javax.swing.JTextArea textAreaRegister;
+    private javax.swing.JTextArea textAreaUpdate;
     private javax.swing.JLabel titleLbl;
     private javax.swing.JButton updateUserBtn;
     // End of variables declaration//GEN-END:variables

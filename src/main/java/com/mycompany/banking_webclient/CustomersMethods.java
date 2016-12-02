@@ -42,6 +42,7 @@ public class CustomersMethods {
        //GET 
         ClientResponse response = target
                 .queryParam("cust_id", id+"")
+                .accept(MediaType.APPLICATION_JSON)
                 .get(ClientResponse.class);
         
         return response.getEntity(String.class);
@@ -106,6 +107,7 @@ public class CustomersMethods {
 
             //PUT 
             ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
+                    .accept(MediaType.APPLICATION_JSON)
                     .put(ClientResponse.class, input);
             
             return response.getEntity(String.class);
