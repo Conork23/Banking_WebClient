@@ -14,29 +14,9 @@ public class CaClient {
     
     public static void main(String[] args){
        
-        //CustomersGUI myGui = new CustomersGUI();
-        AccountsGUI myGui = new AccountsGUI();
+        BankMenu myGui = new BankMenu();
         myGui.setVisible(true);
-
-        /*
-        HttpMethods method = new HttpMethods();
-        System.out.println("=========================================");
-        System.out.println("================Test Data================");
-        int num1, num2;
-        num1 = 3;
-        num2 = 2;
-        System.out.println("    Number 1: "+num1+"\t\tNumber 2: "+num2);
-        System.out.println("=========================================");
-        System.out.println("Add\t\tGet method:\t\t"+method.get(num1,num2));
-        System.out.println("Subtract\tPostJson method:\t"+method.postJson(num1,num2));
-        System.out.println("Subtract\tPostForm method:\t"+method.postForm(num1,num2));
-        System.out.println("Divide\t\tDelete method:\t\t"+method.delete(num1,num2));
-        System.out.println("Multiply\tPut method:\t\t"+method.put(num1,num2));
-        System.out.println("=========================================");
-        System.out.println("=========== End of Test Data=============");
-        System.out.println("=========================================\n");
-        */
-       
+        myGui.setLocationRelativeTo(null); 
     }
     
 }

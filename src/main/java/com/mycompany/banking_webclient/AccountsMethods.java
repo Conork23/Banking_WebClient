@@ -39,6 +39,7 @@ public class AccountsMethods {
             //GET
             ClientResponse response = target
                     .queryParam("cust_id", id+"")
+                    .accept(MediaType.APPLICATION_JSON)
                     .get(ClientResponse.class);
 
             return response.getEntity(String.class);

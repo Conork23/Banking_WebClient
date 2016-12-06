@@ -30,6 +30,8 @@ public class AccountsGUI extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         titleLbl = new javax.swing.JLabel();
+        homeAccountsBtn = new javax.swing.JButton();
+        bankLogo = new javax.swing.JLabel();
         AccountsPane = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         accntInfoLbl = new javax.swing.JLabel();
@@ -84,12 +86,52 @@ public class AccountsGUI extends javax.swing.JFrame {
         accountLbl5 = new javax.swing.JLabel();
         accountToTransfer = new javax.swing.JTextField();
         custIDToTransfer = new javax.swing.JTextField();
+        exitAccountsBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(465, 387));
+        setPreferredSize(new java.awt.Dimension(550, 500));
 
-        titleLbl.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        titleLbl.setText("Accounts Client GUI");
+        jPanel1.setPreferredSize(new java.awt.Dimension(500, 500));
+
+        titleLbl.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        titleLbl.setText("User Account Transactions");
+
+        homeAccountsBtn.setText("Home");
+        homeAccountsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeAccountsBtnActionPerformed(evt);
+            }
+        });
+
+        bankLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/small_logo.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(bankLogo, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
+                        .addGap(71, 71, 71)
+                        .addComponent(homeAccountsBtn)
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(titleLbl)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bankLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(homeAccountsBtn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(titleLbl)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         accntInfoLbl.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         accntInfoLbl.setText("Account Info");
@@ -155,34 +197,36 @@ public class AccountsGUI extends javax.swing.JFrame {
                     .addComponent(deleteAccountBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(balanceBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(addAccountBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(accntInfoLbl)
-                .addGap(23, 23, 23)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(custIDLbl)
-                    .addComponent(custIDTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(accountLbl)
-                    .addComponent(accountTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(sortLbl)
-                    .addComponent(sortTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(balanceBtn)
+                        .addComponent(accntInfoLbl)
+                        .addGap(23, 23, 23)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(custIDLbl)
+                            .addComponent(custIDTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(accountLbl)
+                            .addComponent(accountTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(sortLbl)
+                            .addComponent(sortTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(balanceBtn)
+                        .addGap(16, 16, 16)
                         .addComponent(addAccountBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(deleteAccountBtn)))
-                .addContainerGap())
+                        .addComponent(deleteAccountBtn))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(45, 45, 45))
         );
 
         AccountsPane.addTab("Account Info", jPanel2);
@@ -223,7 +267,7 @@ public class AccountsGUI extends javax.swing.JFrame {
                     .addComponent(customerIDLbl2)
                     .addComponent(accountLbl2)
                     .addComponent(amountLbl))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -308,7 +352,7 @@ public class AccountsGUI extends javax.swing.JFrame {
                             .addComponent(custIDLodgement, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(accountTFLodgement, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1))))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -342,7 +386,7 @@ public class AccountsGUI extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Transfer");
 
-        customerIDLbl4.setText("Customer from:");
+        customerIDLbl4.setText("Customer ID from:");
 
         accountLbl4.setText("Account Number: ");
 
@@ -361,7 +405,7 @@ public class AccountsGUI extends javax.swing.JFrame {
             }
         });
 
-        customerIDLbl5.setText("Customer to:");
+        customerIDLbl5.setText("Customer ID to:");
 
         accountLbl5.setText("Account Number to: ");
 
@@ -372,32 +416,44 @@ public class AccountsGUI extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(amountLbl2)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(transferBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(accountLbl4)
-                    .addComponent(customerIDLbl4)
-                    .addComponent(accountLbl5)
-                    .addComponent(customerIDLbl5)
+                        .addGap(131, 131, 131)
+                        .addComponent(jLabel2)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(121, 121, 121)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel2))
-                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(accountToTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(custIDToTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(custIDFromTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(accountFromTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(customerIDLbl4)
+                            .addComponent(accountLbl4))
+                        .addGap(15, 15, 15)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(amountLbl2)
+                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(custIDFromTransfer)
+                                .addComponent(accountFromTransfer, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                                        .addComponent(accountLbl5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(accountToTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                                        .addComponent(customerIDLbl5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(custIDToTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(29, 29, 29))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                                .addComponent(euroLbl3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(amountTFTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                                .addComponent(transferBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(68, 68, 68))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(euroLbl3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(amountTFTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(137, 137, 137)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(68, 68, 68))))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -406,76 +462,127 @@ public class AccountsGUI extends javax.swing.JFrame {
                 .addGap(5, 5, 5)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(customerIDLbl5)
-                    .addComponent(custIDToTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(accountLbl5)
-                    .addComponent(accountToTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(custIDToTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(customerIDLbl4)
                     .addComponent(custIDFromTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(accountLbl5)
+                    .addComponent(accountToTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(accountLbl4)
                     .addComponent(accountFromTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(amountTFTransfer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(amountLbl2)
-                    .addComponent(euroLbl3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(euroLbl3)
                     .addComponent(transferBtn))
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         AccountsPane.addTab("Transfer", jPanel5);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addComponent(titleLbl))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(AccountsPane, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(titleLbl)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(AccountsPane, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51))
-        );
-
-        AccountsPane.getAccessibleContext().setAccessibleName("Info");
+        exitAccountsBtn.setText("Exit");
+        exitAccountsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitAccountsBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(73, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(exitAccountsBtn)
+                    .addComponent(AccountsPane, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(AccountsPane, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(exitAccountsBtn)
+                .addGap(88, 88, 88))
         );
+
+        AccountsPane.getAccessibleContext().setAccessibleName("Info");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void homeAccountsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeAccountsBtnActionPerformed
+        this.setVisible(false);
+        BankMenu bankGUI = new BankMenu();
+        bankGUI.setVisible(true);
+        bankGUI.setLocationRelativeTo(null);
+        //Return to Login Screen
+    }//GEN-LAST:event_homeAccountsBtnActionPerformed
+
+    private void transferBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transferBtnActionPerformed
+        int cust_to = Integer.parseInt(custIDToTransfer.getText());
+        int account_to = Integer.parseInt(accountToTransfer.getText());
+        int id = Integer.parseInt(custIDFromTransfer.getText());
+        int account_no = Integer.parseInt(accountFromTransfer.getText());
+        int amount = Integer.parseInt(amountTFTransfer.getText());
+
+        AccountsMethods actsmethod = new AccountsMethods();
+        actsmethod.transferTransaction(cust_to, account_to, id, account_no, amount);
+
+        transferTextArea.setText("Amount: "+amount+" has been transferred from account number "+account_no+" to account number "+account_to);
+    }//GEN-LAST:event_transferBtnActionPerformed
+
+    private void lodgementBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lodgementBtnActionPerformed
+        int id = Integer.parseInt(custIDLodgement.getText());
+        int account_no = Integer.parseInt(accountTFLodgement.getText());
+        int amount = Integer.parseInt(amountTFLodgement.getText());
+
+        AccountsMethods actsmethod = new AccountsMethods();
+        actsmethod.lodgementTransaction(id, account_no, amount);
+
+        lodgementTextArea.setText("Amount: "+amount+" has been lodged to account number "+account_no);
+    }//GEN-LAST:event_lodgementBtnActionPerformed
+
+    private void withdrawBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_withdrawBtnActionPerformed
+        int id = Integer.parseInt(custIDWithdraw.getText());
+        int account_no = Integer.parseInt(accountTFWithdraw.getText());
+        int amount = Integer.parseInt(amountTFWithdraw.getText());
+
+        AccountsMethods actsmethod = new AccountsMethods();
+        actsmethod.withdrawTransaction(id, account_no, amount);
+
+        transactionTextArea.setText("Amount: "+amount+" has been withdrawn from account number "+account_no);
+    }//GEN-LAST:event_withdrawBtnActionPerformed
+
+    private void deleteAccountBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteAccountBtnActionPerformed
+        int id = Integer.parseInt(custIDTF.getText());
+        int account_no = Integer.parseInt(accountTF.getText());
+
+        AccountsMethods actsmethod = new AccountsMethods();
+        actsmethod.deleteAccount(id, account_no);
+
+        accountInfoTextArea.setText("Account Number: "+account_no+" has been deleted");
+    }//GEN-LAST:event_deleteAccountBtnActionPerformed
+
+    private void addAccountBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAccountBtnActionPerformed
+        int id = Integer.parseInt(custIDTF.getText());
+        int sort_code = Integer.parseInt(sortTF.getText());
+
+        AccountsMethods actsmethod = new AccountsMethods();
+        actsmethod.addAccount(id, sort_code);
+
+        accountInfoTextArea.setText("Thank You, a new account registered to Customer ID: "+id+" has been added to system");
+    }//GEN-LAST:event_addAccountBtnActionPerformed
 
     private void balanceBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_balanceBtnActionPerformed
         int id = Integer.parseInt(custIDTF.getText());
@@ -486,60 +593,10 @@ public class AccountsGUI extends javax.swing.JFrame {
         accountInfoTextArea.setText("The Balance For Your Accounts Is: \n"+ balance);
     }//GEN-LAST:event_balanceBtnActionPerformed
 
-    private void addAccountBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addAccountBtnActionPerformed
-       int id = Integer.parseInt(custIDTF.getText());
-       int sort_code = Integer.parseInt(sortTF.getText());
-
-        AccountsMethods actsmethod = new AccountsMethods();
-        actsmethod.addAccount(id, sort_code);
-
-        accountInfoTextArea.setText("Thank You, a new account registered to Customer ID: "+id+" has been added to system");
-    }//GEN-LAST:event_addAccountBtnActionPerformed
-
-    private void deleteAccountBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteAccountBtnActionPerformed
-       int id = Integer.parseInt(custIDTF.getText());
-       int account_no = Integer.parseInt(accountTF.getText());
-
-        AccountsMethods actsmethod = new AccountsMethods();
-        actsmethod.deleteAccount(id, account_no);
-
-        accountInfoTextArea.setText("Account Number: "+account_no+" has been deleted");
-    }//GEN-LAST:event_deleteAccountBtnActionPerformed
-
-    private void withdrawBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_withdrawBtnActionPerformed
-       int id = Integer.parseInt(custIDWithdraw.getText());
-       int account_no = Integer.parseInt(accountTFWithdraw.getText());
-       int amount = Integer.parseInt(amountTFWithdraw.getText());
-
-        AccountsMethods actsmethod = new AccountsMethods();
-        actsmethod.withdrawTransaction(id, account_no, amount);
-
-        transactionTextArea.setText("Amount: "+amount+" has been withdrawn from account number "+account_no);
-    }//GEN-LAST:event_withdrawBtnActionPerformed
-
-    private void lodgementBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lodgementBtnActionPerformed
-       int id = Integer.parseInt(custIDLodgement.getText());
-       int account_no = Integer.parseInt(accountTFLodgement.getText());
-       int amount = Integer.parseInt(amountTFLodgement.getText());
-
-        AccountsMethods actsmethod = new AccountsMethods();
-        actsmethod.lodgementTransaction(id, account_no, amount);
-
-        lodgementTextArea.setText("Amount: "+amount+" has been lodged to account number "+account_no);
-    }//GEN-LAST:event_lodgementBtnActionPerformed
-
-    private void transferBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_transferBtnActionPerformed
-       int cust_to = Integer.parseInt(custIDToTransfer.getText());
-       int account_to = Integer.parseInt(accountToTransfer.getText());
-       int id = Integer.parseInt(custIDFromTransfer.getText());
-       int account_no = Integer.parseInt(accountFromTransfer.getText());
-       int amount = Integer.parseInt(amountTFTransfer.getText());
-
-        AccountsMethods actsmethod = new AccountsMethods();
-        actsmethod.transferTransaction(cust_to, account_to, id, account_no, amount);
-
-        transferTextArea.setText("Amount: "+amount+" has been transferred from account number "+account_no+" to account number "+account_to);
-    }//GEN-LAST:event_transferBtnActionPerformed
+    private void exitAccountsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitAccountsBtnActionPerformed
+       this.dispose();
+       System.exit(0);
+    }//GEN-LAST:event_exitAccountsBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -599,6 +656,7 @@ public class AccountsGUI extends javax.swing.JFrame {
     private javax.swing.JTextField amountTFTransfer;
     private javax.swing.JTextField amountTFWithdraw;
     private javax.swing.JButton balanceBtn;
+    private javax.swing.JLabel bankLogo;
     private javax.swing.JTextField custIDFromTransfer;
     private javax.swing.JLabel custIDLbl;
     private javax.swing.JTextField custIDLodgement;
@@ -613,6 +671,8 @@ public class AccountsGUI extends javax.swing.JFrame {
     private javax.swing.JLabel euroLbl;
     private javax.swing.JLabel euroLbl2;
     private javax.swing.JLabel euroLbl3;
+    private javax.swing.JButton exitAccountsBtn;
+    private javax.swing.JButton homeAccountsBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
