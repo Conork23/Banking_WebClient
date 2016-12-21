@@ -147,8 +147,20 @@ public class CustomerMethods {
                     .accept(MediaType.APPLICATION_JSON)
                     .header("API_KEY", "API_KEY: 521197c4-bb29-11e6-a4a6-cec0c932ce01")
                     .put(ClientResponse.class, input);
+            
+        String body = response.getEntity(String.class);
+        if(id > -1){
+            //returns a single customer
+            CustomerModel customer = new Gson().fromJson(body, CustomerModel.class);
+            return " Name: "+customer.getName()+
+                    "\n Address: "+ customer.getAddress()+
+                    "\n Phone: "+ customer.getPhone()+
+                    "\n Email: "+ customer.getEmail() +
+                    "\n ID: "+ customer.getCustId()
+                    ;
+        }
 
-            return response.getEntity(String.class);
+//            return response.getEntity(String.class);
 
         } catch (ClientHandlerException | UniformInterfaceException e) {
         }

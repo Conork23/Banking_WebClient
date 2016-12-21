@@ -145,25 +145,27 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="custIDLbl" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
-                              <Component id="accntInfoLbl" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="accntInfoLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="accountLbl" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="custIDTF" pref="100" max="32767" attributes="0"/>
+                                  <Component id="custIDTF" pref="110" max="32767" attributes="0"/>
                                   <Component id="accountTF" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="balanceBtn" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                          <Component id="addAccountBtn" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                          <Component id="deleteAccountBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="addAccountBtn" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="balanceBtn" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="deleteAccountBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="193" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="218" max="-2" attributes="0"/>
+                      <EmptySpace pref="17" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -183,11 +185,11 @@
                                   <Component id="accountLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="accountTF" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="18" max="32767" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="balanceBtn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="addAccountBtn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="deleteAccountBtn" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
@@ -607,22 +609,23 @@
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="customerIDLbl5" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="custIDToTransfer" min="-2" pref="88" max="-2" attributes="0"/>
-                                  </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="transferBtn" min="-2" pref="110" max="-2" attributes="0"/>
                                           <Component id="accountLbl5" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="accountToTransfer" min="-2" pref="88" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="accountToTransfer" min="-2" pref="80" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="customerIDLbl5" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="custIDToTransfer" min="-2" pref="66" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
