@@ -5,8 +5,6 @@
  */
 package com.mycompany.banking_webclient;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -18,7 +16,7 @@ public class CustomerModel {
     
 private String address;
 
-private Integer custId;
+private Integer cust_id;
 
 private String email;
 
@@ -30,9 +28,9 @@ public CustomerModel() {
     
 }
 
-public CustomerModel(String address, Integer custId, String email, String phone) {
+public CustomerModel(String address, Integer cust_id, String email, String phone) {
     this.address = address;
-    this.custId = custId;
+    this.cust_id = cust_id;
     this.email = email;
     this.phone = phone;
 }
@@ -46,11 +44,11 @@ this.address = address;
 }
 
 public Integer getCustId() {
-return custId;
+return cust_id;
 }
 
-public void setCustId(Integer custId) {
-this.custId = custId;
+public void setCustId(Integer cust_id) {
+this.cust_id = cust_id;
 }
 
 public String getEmail() {

@@ -398,12 +398,16 @@ public class CustomersGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void listUsersBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listUsersBtnActionPerformed
-        int id = Integer.parseInt(idTF.getText());
-
+        String idS = idTF.getText();
+        int id = -1;
+        if(idS.trim().length() > 0){
+         id = Integer.parseInt(idTF.getText());
+        }
+        
         CustomerMethods custsmethod = new CustomerMethods();
         String cust = custsmethod.getCustomer(id);
 
-        textAreaInfo.setText("Customer Details: "+ cust);
+        textAreaInfo.setText("Customer Details:\n"+ cust);
     }//GEN-LAST:event_listUsersBtnActionPerformed
 
     private void addUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addUserBtnActionPerformed
