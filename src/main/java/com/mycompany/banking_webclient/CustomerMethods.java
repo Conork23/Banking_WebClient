@@ -62,6 +62,7 @@ public class CustomerMethods {
         Gson gson = new Gson();
         CustomerModel customer = gson.fromJson(obj, CustomerModel.class); 
         
+        //Testing one property for now
         return customer.getName();
        
         } catch (ClientHandlerException | UniformInterfaceException e) {

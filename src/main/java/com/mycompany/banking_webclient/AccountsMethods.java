@@ -15,7 +15,7 @@ public class AccountsMethods {
     String baseUrl;
     Integer port;
     
-    public AccountsMethods(){
+    public AccountsMethods() {
         port = 49000;
         baseUrl = "http://localhost:" + port + "/api/accounts/";
     }
@@ -30,7 +30,7 @@ public class AccountsMethods {
      *transferTransaction   - Transfer money from account to another    - Input type is Json (enter customer to, account_to, cust_id, account_no, amount)
      */
     
-    public String getBalance(int id){
+    public String getBalance(int id) {
         try {
             Client client = Client.create();
             String url = baseUrl+"balance/"+id;
@@ -38,27 +38,30 @@ public class AccountsMethods {
             
             //GET
             ClientResponse response = target
-                    .queryParam("cust_id", id+"")
+                    .queryParam("cust_id", id+" ")
+                    .header("API_KEY", "API_KEY: 521197c4-bb29-11e6-a4a6-cec0c932ce01")
                     .accept(MediaType.APPLICATION_JSON)
                     .get(ClientResponse.class);
-
+            
+             
             return response.getEntity(String.class);
+           
         } catch (ClientHandlerException | UniformInterfaceException e) {}
         return "Error";
     }
         
-    public String addAccount(int id, int sort_code){
+    public String addAccount(int id) {
         try {
             Client client = Client.create();
             WebResource webResource = client.resource(baseUrl);
             
             String input = "{\""
                     + "cust_id\":\""+id+"\","
-                    + "\"sort_code\":\""+sort_code+"\""
                     + "}"; 
 
             //POST 
             ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
+                    .header("API_KEY", "API_KEY: 521197c4-bb29-11e6-a4a6-cec0c932ce01")
                     .post(ClientResponse.class, input);                   
 
             return response.getEntity(String.class);
@@ -68,7 +71,7 @@ public class AccountsMethods {
         return "Error";
     }
         
-    public String deleteAccount(int id, int account_no){
+    public String deleteAccount(int id, int account_no) {
         try {
             Client client = Client.create();         
             String url = baseUrl+id+"/"+account_no;
@@ -76,9 +79,10 @@ public class AccountsMethods {
 
             //DELETE
             ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
+                    .header("API_KEY", "API_KEY: 521197c4-bb29-11e6-a4a6-cec0c932ce01")
                     .delete(ClientResponse.class);
 
-            return "Account Deleted";
+            return "Account Deleted: " + account_no;
             
 
         } catch (ClientHandlerException | UniformInterfaceException e) {}
@@ -86,7 +90,7 @@ public class AccountsMethods {
         return "Error";
     }
         
-    public String withdrawTransaction(int id, int account_no, int amount){
+    public String withdrawTransaction(int id, int account_no, int amount) {
         try {
             Client client = Client.create();
             String url = baseUrl+"withdrawal";
@@ -100,6 +104,7 @@ public class AccountsMethods {
 
             //POST 
             ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
+                    .header("API_KEY", "API_KEY: 521197c4-bb29-11e6-a4a6-cec0c932ce01")
                     .post(ClientResponse.class, input);                   
 
             return response.getEntity(String.class);
@@ -123,6 +128,7 @@ public class AccountsMethods {
 
             //POST 
             ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
+                    .header("API_KEY", "API_KEY: 521197c4-bb29-11e6-a4a6-cec0c932ce01")
                     .post(ClientResponse.class, input);                   
 
             return response.getEntity(String.class);
@@ -132,7 +138,7 @@ public class AccountsMethods {
         return "Error";
     }
     
-    public String transferTransaction(int cust_to, int account_to, int id, int account_no, int amount){
+    public String transferTransaction(int cust_to, int account_to, int id, int account_no, int amount) {
         try {
             Client client = Client.create();
             String url = baseUrl+"transfer";
@@ -148,6 +154,7 @@ public class AccountsMethods {
 
             //POST 
             ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
+                    .header("API_KEY", "API_KEY: 521197c4-bb29-11e6-a4a6-cec0c932ce01")
                     .post(ClientResponse.class, input);                   
 
             return response.getEntity(String.class);

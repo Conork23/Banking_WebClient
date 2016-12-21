@@ -400,7 +400,7 @@ public class CustomersGUI extends javax.swing.JFrame {
     private void listUsersBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listUsersBtnActionPerformed
         int id = Integer.parseInt(idTF.getText());
 
-        CustomersMethods custsmethod = new CustomersMethods();
+        CustomerMethods custsmethod = new CustomerMethods();
         String cust = custsmethod.getCustomer(id);
 
         textAreaInfo.setText("Customer Details: "+ cust);
@@ -412,7 +412,7 @@ public class CustomersGUI extends javax.swing.JFrame {
         String email = emailTF.getText();
         String phone = phoneTF.getText();
 
-        CustomersMethods custsmethod = new CustomersMethods();
+        CustomerMethods custsmethod = new CustomerMethods();
         custsmethod.addCustomer(name, address, email, phone);
 
         textAreaRegister.setText("Thank You, "+name+" has been added to system");
@@ -421,7 +421,7 @@ public class CustomersGUI extends javax.swing.JFrame {
     private void deleteUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteUserBtnActionPerformed
         int id = Integer.parseInt(idTFDelete.getText());
 
-        CustomersMethods custsmethod = new CustomersMethods();
+        CustomerMethods custsmethod = new CustomerMethods();
         custsmethod.deleteCustomer(id);
 
         textAreaDelete.setText("Customer: "+id+" has been deleted");
@@ -434,7 +434,7 @@ public class CustomersGUI extends javax.swing.JFrame {
         String email = emailTFUpdate.getText();
         String phone = phoneTFUpdate.getText();
 
-        CustomersMethods custsmethod = new CustomersMethods();
+        CustomerMethods custsmethod = new CustomerMethods();
         String cust = custsmethod.updateCustomer(id, name, address, email, phone);
 
         textAreaUpdate.setText("Updated Customer Information: "+ cust);
