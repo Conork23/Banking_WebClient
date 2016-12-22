@@ -79,7 +79,7 @@ public class AccountsMethods {
             balance = 0;
             
             String input = "{\""
-                    + "cid\":\"" + id + "\","
+                    + "cid\": " + id + ","
                      + "\"address\":\"" + sort_code + "\","
                     + "\"balance\":\"" + balance + "\""
                     + "}"; 
