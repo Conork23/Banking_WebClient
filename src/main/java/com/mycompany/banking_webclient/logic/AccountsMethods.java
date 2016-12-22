@@ -99,7 +99,7 @@ public class AccountsMethods {
     public String deleteAccount(int id, int account_no) {
         try {
             Client client = Client.create();         
-            String url = baseUrl+id+"/"+account_no;
+            String url = baseUrl+account_no;
             WebResource webResource = client.resource(url);
 
             //DELETE
