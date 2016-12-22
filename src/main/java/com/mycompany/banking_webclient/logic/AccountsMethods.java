@@ -1,5 +1,6 @@
-package com.mycompany.banking_webclient;
+package com.mycompany.banking_webclient.logic;
 
+import com.mycompany.banking_webclient.Models.AccountsModel;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -76,7 +77,6 @@ public class AccountsMethods {
             Client client = Client.create();
             WebResource webResource = client.resource(baseUrl);
             balance = 0;
-            sort_code = 1;
             
             String input = "{\""
                     + "cid\":\"" + id + "\","

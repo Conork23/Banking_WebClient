@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.banking_webclient;
+package com.mycompany.banking_webclient.logic;
 
+import com.mycompany.banking_webclient.Models.CustomerModel;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -71,7 +72,7 @@ public class CustomerMethods {
             String customers = "";
             
             for(CustomerModel cust: list){
-              customers = customers + "Name: "+cust.getName()+"\n";
+              customers = customers + "Name: "+cust.getName()+"\n" + "ID: " + cust.getCustId();
             }
             
             return customers;

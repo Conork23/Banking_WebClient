@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.banking_webclient;
+package com.mycompany.banking_webclient.UI;
 
+import com.mycompany.banking_webclient.logic.AccountsMethods;
 import javax.swing.UIManager;
 
 
@@ -89,7 +90,6 @@ public class AccountsGUI extends javax.swing.JFrame {
         exitAccountsBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(550, 500));
 
         jPanel1.setPreferredSize(new java.awt.Dimension(500, 500));
 

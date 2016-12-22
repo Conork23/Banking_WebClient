@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.banking_webclient;
+package com.mycompany.banking_webclient.UI;
 
+import com.mycompany.banking_webclient.UI.CustomersGUI;
+import com.mycompany.banking_webclient.UI.AccountsGUI;
 import javax.swing.UIManager;
 
 /**
