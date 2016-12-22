@@ -62,7 +62,7 @@ public class AccountsMethods {
             String accounts = "";
             
             for(AccountsModel acc: list){
-              accounts = accounts + "Balance: "+acc.getBalance()+"\n";
+              accounts = accounts + "Account: "+acc.getAccountNo()+" Balance: "+acc.getBalance()+"\n";
             }
             
             return accounts;
@@ -79,7 +79,7 @@ public class AccountsMethods {
             balance = 0;
             
             String input = "{\""
-                    + "cid\":\"" + id + "\","
+                    + "cid\": " + id + ","
                      + "\"address\":\"" + sort_code + "\","
                     + "\"balance\":\"" + balance + "\""
                     + "}"; 
