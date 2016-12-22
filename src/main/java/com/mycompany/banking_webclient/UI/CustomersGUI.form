@@ -129,19 +129,23 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="listUsersBtn" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Component id="idLbl" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                                  <Component id="idTF" min="-2" pref="259" max="-2" attributes="0"/>
-                              </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="idLbl" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="idTF" min="-2" pref="259" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="405" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
+                              <Component id="listUsersBtn" min="-2" pref="150" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="126" max="32767" attributes="0"/>
+                      <EmptySpace pref="47" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -153,11 +157,11 @@
                           <Component id="idLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="idTF" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="listUsersBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" pref="151" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="96" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="98" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -207,29 +211,25 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="jScrollPane2" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="emailLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="phoneLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="addressLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="nameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="emailTF" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="phoneTF" alignment="0" pref="176" max="32767" attributes="0"/>
-                                  <Component id="addressTF" max="32767" attributes="0"/>
-                                  <Component id="nameTF" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="addUserBtn" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="emailLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="phoneLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="addressLbl" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="nameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="152" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="addressTF" min="-2" pref="176" max="-2" attributes="0"/>
+                          <Component id="nameTF" min="-2" pref="176" max="-2" attributes="0"/>
+                          <Component id="emailTF" alignment="0" min="-2" pref="176" max="-2" attributes="0"/>
+                          <Component id="phoneTF" min="-2" pref="176" max="-2" attributes="0"/>
+                          <Component id="addUserBtn" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jScrollPane2" pref="216" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -238,36 +238,33 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="nameLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="nameTF" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Component id="addressLbl" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="nameLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="nameTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="addressLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="addressTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="emailLbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="emailTF" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="phoneLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="phoneTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="addUserBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="41" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="addressTF" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jScrollPane2" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="emailLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                              <Component id="emailTF" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="phoneLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="phoneTF" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="addUserBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="17" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -340,29 +337,25 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="jScrollPane3" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="emailLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="phoneLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="addressLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="nameLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="idLbl2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="emailTFUpdate" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="phoneTFUpdate" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="addressTFUpdate" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="nameTFUpdate" alignment="1" pref="176" max="32767" attributes="0"/>
-                                  <Component id="idTFUpdate" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="updateUserBtn" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="emailLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="phoneLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="addressLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="nameLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="idLbl2" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="166" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="updateUserBtn" max="32767" attributes="0"/>
+                          <Component id="nameTFUpdate" pref="176" max="32767" attributes="0"/>
+                          <Component id="idTFUpdate" pref="176" max="32767" attributes="0"/>
+                          <Component id="addressTFUpdate" alignment="0" pref="176" max="32767" attributes="0"/>
+                          <Component id="emailTFUpdate" alignment="0" pref="176" max="32767" attributes="0"/>
+                          <Component id="phoneTFUpdate" pref="176" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jScrollPane3" min="-2" pref="190" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -373,43 +366,39 @@
                           <Component id="idLbl2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="idTFUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
-                              <Component id="updateUserBtn" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="nameLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="nameTFUpdate" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                                      <Component id="addressLbl1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="addressTFUpdate" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="emailLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                                      <Component id="emailTFUpdate" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="phoneLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="phoneTFUpdate" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="nameLbl1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="nameTFUpdate" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="addressLbl1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="addressTFUpdate" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="emailLbl1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="emailTFUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="phoneLbl1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="phoneTFUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="updateUserBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane3" min="-2" pref="227" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

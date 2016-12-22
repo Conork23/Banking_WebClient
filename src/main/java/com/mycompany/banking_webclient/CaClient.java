@@ -5,6 +5,8 @@
  */
 package com.mycompany.banking_webclient;
 
+import com.mycompany.banking_webclient.UI.BankMenu;
+
 /**
  *
  * @author Conor
