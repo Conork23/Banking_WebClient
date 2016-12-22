@@ -105,6 +105,7 @@ public class CustomersGUI extends javax.swing.JFrame {
 
         idLbl.setText("Customer ID: ");
 
+        textAreaInfo.setEditable(false);
         textAreaInfo.setColumns(20);
         textAreaInfo.setRows(5);
         jScrollPane1.setViewportView(textAreaInfo);
@@ -367,7 +368,7 @@ public class CustomersGUI extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(clearBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(exitBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE))
+                            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 516, Short.MAX_VALUE))
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
