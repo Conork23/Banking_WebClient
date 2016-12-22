@@ -10,43 +10,49 @@ package com.mycompany.banking_webclient;
  * @author ianarbuckle
  */
 public class AccountsModel {
-    
-    
-private Integer accountNo;
-private Integer balance;
-private Integer cid;
-private Integer sortCode;
 
-public Integer getAccountNo() {
-return accountNo;
-}
+    private Integer accountNo;
+    private Integer balance;
+    private Integer cid;
+    private Integer sortCode;
 
-public void setAccountNo(Integer accountNo) {
-this.accountNo = accountNo;
-}
+    public AccountsModel(Integer accountNo, Integer balance, Integer cid, Integer sortCode) {
+        this.accountNo = accountNo;
+        this.balance = balance;
+        this.cid = cid;
+        this.sortCode = sortCode;
+    }
 
-public Integer getBalance() {
-return balance;
-}
+    public Integer getAccountNo() {
+        return accountNo;
+    }
 
-public void setBalance(Integer balance) {
-this.balance = balance;
-}
+    public void setAccountNo(Integer accountNo) {
+        this.accountNo = accountNo;
+    }
 
-public Integer getCid() {
-return cid;
-}
+    public Integer getBalance() {
+        return balance;
+    }
 
-public void setCid(Integer cid) {
-this.cid = cid;
-}
+    public void setBalance(Integer balance) {
+        this.balance = balance;
+    }
 
-public Integer getSortCode() {
-return sortCode;
-}
+    public Integer getCid() {
+        return cid;
+    }
 
-public void setSortCode(Integer sortCode) {
-this.sortCode = sortCode;
-}
-    
+    public void setCid(Integer cid) {
+        this.cid = cid;
+    }
+
+    public Integer getSortCode() {
+        return sortCode;
+    }
+
+    public void setSortCode(Integer sortCode) {
+        this.sortCode = sortCode;
+    }
+
 }

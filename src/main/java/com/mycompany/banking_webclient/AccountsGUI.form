@@ -157,9 +157,9 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="addAccountBtn" min="-2" pref="140" max="-2" attributes="0"/>
                                   <Component id="balanceBtn" min="-2" pref="140" max="-2" attributes="0"/>
                                   <Component id="deleteAccountBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="addAccountBtn" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -281,41 +281,30 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="customerIDLbl2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="accountLbl2" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="custIDWithdraw" min="-2" pref="88" max="-2" attributes="0"/>
-                                          <Component id="acctTransactionsLbl" min="-2" max="-2" attributes="0"/>
-                                          <Component id="accountTFWithdraw" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
-                                          <Component id="amountTFWithdraw" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="customerIDLbl2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="accountLbl2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="amountLbl" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="amountLbl" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="euroLbl" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="custIDWithdraw" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Component id="acctTransactionsLbl" min="-2" max="-2" attributes="0"/>
+                                  <Component id="accountTFWithdraw" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Component id="amountTFWithdraw" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="euroLbl" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="withdrawBtn" min="-2" pref="110" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="withdrawBtn" min="-2" pref="110" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" pref="230" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="23" max="32767" attributes="0"/>
                   </Group>
@@ -341,10 +330,9 @@
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="amountLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="amountTFWithdraw" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="euroLbl" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                              <Component id="euroLbl" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                               <Component id="withdrawBtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
                           </Group>

@@ -1,10 +1,14 @@
 package com.mycompany.banking_webclient;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientHandlerException;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.UniformInterfaceException;
 import com.sun.jersey.api.client.WebResource;
+import java.util.ArrayList;
 import javax.ws.rs.core.MediaType;
 
 /**
@@ -33,30 +37,51 @@ public class AccountsMethods {
     public String getBalance(int id) {
         try {
             Client client = Client.create();
-            String url = baseUrl+"balance/"+id;
-            WebResource target = client.resource(url);
+            String s_id = (id != -1)? id+"" : "";
+            WebResource target = client.resource(baseUrl+"balance/"+s_id);
+
             
             //GET
             ClientResponse response = target
-                    .queryParam("cust_id", id+" ")
                     .header("API_KEY", "API_KEY: 521197c4-bb29-11e6-a4a6-cec0c932ce01")
                     .accept(MediaType.APPLICATION_JSON)
                     .get(ClientResponse.class);
             
              
-            return response.getEntity(String.class);
+        String body = response.getEntity(String.class);
+        if(id > -1){
+            //returns multiple customers
+            JsonArray arr = new Gson().fromJson(body, JsonArray.class);
+            ArrayList<AccountsModel> list = new ArrayList<>();
+            for(JsonElement elem: arr){
+                AccountsModel acc = new Gson().fromJson(elem, AccountsModel.class);
+                list.add(acc);            
+            }
+            
+            String accounts = "";
+            
+            for(AccountsModel acc: list){
+              accounts = accounts + "Balance: "+acc.getBalance()+"\n";
+            }
+            
+            return accounts;
+        }
            
         } catch (ClientHandlerException | UniformInterfaceException e) {}
         return "Error";
     }
         
-    public String addAccount(int id) {
+    public String addAccount(int id, int balance, int sort_code) {
         try {
             Client client = Client.create();
             WebResource webResource = client.resource(baseUrl);
+            balance = 0;
+            sort_code = 1;
             
             String input = "{\""
-                    + "cust_id\":\""+id+"\","
+                    + "cid\":\"" + id + "\","
+                     + "\"address\":\"" + sort_code + "\","
+                    + "\"balance\":\"" + balance + "\""
                     + "}"; 
 
             //POST 
