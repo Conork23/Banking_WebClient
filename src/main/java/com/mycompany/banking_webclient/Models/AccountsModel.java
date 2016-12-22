@@ -11,24 +11,24 @@ package com.mycompany.banking_webclient.Models;
  */
 public class AccountsModel {
 
-    private Integer accountNo;
+    private Integer account_no;
     private Integer balance;
     private Integer cid;
     private Integer sortCode;
 
-    public AccountsModel(Integer accountNo, Integer balance, Integer cid, Integer sortCode) {
-        this.accountNo = accountNo;
+    public AccountsModel(Integer account_no, Integer balance, Integer cid, Integer sortCode) {
+        this.account_no = account_no;
         this.balance = balance;
         this.cid = cid;
         this.sortCode = sortCode;
     }
 
     public Integer getAccountNo() {
-        return accountNo;
+        return account_no;
     }
 
-    public void setAccountNo(Integer accountNo) {
-        this.accountNo = accountNo;
+    public void setAccountNo(Integer account_no) {
+        this.account_no = account_no;
     }
 
     public Integer getBalance() {

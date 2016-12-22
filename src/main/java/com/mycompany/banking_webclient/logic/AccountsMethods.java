@@ -62,7 +62,7 @@ public class AccountsMethods {
             String accounts = "";
             
             for(AccountsModel acc: list){
-              accounts = accounts + "Balance: "+acc.getBalance()+"\n";
+              accounts = accounts + "Account: "+acc.getAccountNo()+" Balance: "+acc.getBalance()+"\n";
             }
             
             return accounts;
