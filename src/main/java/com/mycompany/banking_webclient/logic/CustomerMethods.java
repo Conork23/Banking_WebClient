@@ -72,7 +72,7 @@ public class CustomerMethods {
             String customers = "";
             
             for(CustomerModel cust: list){
-              customers = customers + "Name: "+cust.getName()+"\n" + "ID: " + cust.getCustId();
+              customers = customers + "Name: "+cust.getName()+"\tID: " + cust.getCustId()+"\n";
             }
             
             return customers;
