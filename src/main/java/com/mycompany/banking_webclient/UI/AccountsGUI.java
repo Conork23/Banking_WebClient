@@ -138,6 +138,7 @@ public class AccountsGUI extends javax.swing.JFrame {
 
         custIDLbl.setText("Customer ID: ");
 
+        accountInfoTextArea.setEditable(false);
         accountInfoTextArea.setColumns(20);
         accountInfoTextArea.setRows(5);
         jScrollPane1.setViewportView(accountInfoTextArea);
